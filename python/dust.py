@@ -29,6 +29,9 @@ def dustTransmission(filter, ebv) :
     return dustTransmission
 
 def dustA(filter) :
+    '''
+    Following equation 3 in https://articles.adsabs.harvard.edu/pdf/1989ApJ...345..245C
+    '''
     if filter == "u" : A = 4.544
     elif filter == "g" : A = 3.764
     elif filter == "r" : A = 2.765
