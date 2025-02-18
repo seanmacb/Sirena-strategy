@@ -29,12 +29,20 @@ def dustTransmission(filter, ebv) :
     return dustTransmission
 
 def dustA(filter) :
+    '''
+    Following equation 3 in https://articles.adsabs.harvard.edu/pdf/1989ApJ...345..245C
+    '''
     if filter == "u" : A = 4.544
     elif filter == "g" : A = 3.764
     elif filter == "r" : A = 2.765
     elif filter == "i" : A =  2.483
     elif filter == "z" : A =  1.935
     elif filter == "y" : A =  1.515
+    elif filter == 'M411' : A = 1.429
+    elif filter == "M438" : A = 1.332
+    elif filter == "M464" : A = 1.238
+    elif filter == "M490" : A = 1.152
+    elif filter == "M517" : A = 1.076
     else :
         raise Exception ("no such filter {}".format(filter))
     return A
