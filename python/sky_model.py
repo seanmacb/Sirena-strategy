@@ -84,6 +84,12 @@ def moon_mag(phase, filter):
         mag = delgV - delgr - delri - deliz
     elif filter == "y":
         mag = delgV - delgr - delri - deliz - delzy
+
+    elif filter == 'M411' : mag = delgV # Assume similar to g
+    elif filter == "M438" : mag = delgV # Assume similar to g
+    elif filter == "M464" : mag = delgV # Assume similar to g
+    elif filter == "M490" : mag = delgV # Assume similar to g
+    elif filter == "M517" : mag = delgV # Assume similar to g
     else:
         raise Exception("no such filter {}".format(filter))
     mag = mag+vmag
@@ -111,6 +117,23 @@ def sky_brightness_model(filter, zenith_distance):
     elif filter == "Y":
         sky = 18.0
         slope = 0.0150
+
+    elif filter == 'M411' : 
+       sky = 22 # Assume similar to g
+       slope = 0.0114
+    elif filter == "M438" :
+       sky = 22 # Assume similar to g
+       slope = 0.0114
+    elif filter == "M464" :
+       sky = 22 # Assume similar to g
+       slope = 0.0114
+    elif filter == "M490" :
+       sky = 22 # Assume similar to g
+       slope = 0.0114
+    elif filter == "M517" :
+       sky = 22 # Assume similar to g
+       slope = 0.0114
+   
     else:
         raise Exception("no such filter {}".format(filter))
 
