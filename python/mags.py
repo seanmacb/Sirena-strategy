@@ -248,6 +248,11 @@ class observed(object):
                 m_zp = 22.5
             elif filt == "y":
                 m_zp = 20.6
+            elif filter == 'M411' : m_zp = 23.3 # Assume similar to g
+            elif filter == "M438" : m_zp = 23.3 # Assume similar to g
+            elif filter == "M464" : m_zp = 23.3 # Assume similar to g
+            elif filter == "M490" : m_zp = 23.3 # Assume similar to g
+            elif filter == "M517" : m_zp = 23.3 # Assume similar to g
             else:
                 raise Exception("no such filt")
 
